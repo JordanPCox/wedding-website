@@ -1,0 +1,1 @@
+# This is a website that allows users to submit photos, stories, etc. to celebrate the wedding of Micaela and Jordan.
