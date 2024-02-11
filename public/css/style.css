@@ -7,7 +7,7 @@ h1 {
     color: #E6EEF0;
 }
 
-.hero-image{
+.hero-image {
     background-image: url('/images/hero-img2.jpg');
     background-size: cover;
     background-position: center;
@@ -32,6 +32,34 @@ p {
 .guestbook-index {
     color: #E6EEF0;
 }
+
+/* Adjustments for form */
+.container {
+    color: #E6EEF0; /* Form text color */
+}
+
+.form-label {
+    color: #E6EEF0; /* Label text color */
+}
+
+.form-control {
+    background-color: #3D3D4E; /* Input background color */
+    color: #E6EEF0; /* Input text color */
+    border-color: #5E5E75; /* Input border color */
+}
+
+.btn-primary {
+    background-color: #5E5E75; /* Button background color */
+    border-color: #5E5E75; /* Button border color */
+    color: #E6EEF0; /* Button text color */
+}
+
+.btn-primary:hover {
+    background-color: #3D3D4E; /* Hover background color */
+    border-color: #3D3D4E; /* Hover border color */
+    color: #E6EEF0; /* Hover text color */
+}
+
 
 
 /* coolor palletes? #E6EEF0, 2E2E3A, A799B7 */
