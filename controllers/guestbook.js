@@ -17,4 +17,8 @@ router.get('/', (req, res) => {
     res.render('guestbook/index', { guestbook })
 })
 
+router.get('/new', (req, res) => {
+    res.render('guestbook/new')
+})
+
 module.exports = router
