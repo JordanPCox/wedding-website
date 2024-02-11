@@ -21,4 +21,9 @@ router.get('/new', (req, res) => {
     res.render('guestbook/new')
 })
 
+router.post('/', (req, res) => {
+    console.log(req.body)
+    res.send('POST /places')
+})
+
 module.exports = router
