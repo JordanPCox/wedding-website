@@ -1,19 +1,7 @@
 const router = require('express').Router()
+const guestbook = require('../models/guestbook.js')
 
 router.get('/', (req, res) => {
-    let guestbook = [{
-        name: 'Nick',
-        location: 'Concord, NC',
-        story: 'Met in Mrs. Miller\'s 2nd grade class',
-        pic: '/images/test-1-sm.jpg',
-        advice: 'Do not have kids!'
-    }, {
-        name: 'Hannah',
-        location: 'NC State',
-        story: 'Met in college freshman year',
-        pic: '/images/test-2-sm.jpg',
-        advice: 'Do not get a dog if you do not have a yard!'
-    }]
     res.render('guestbook/index', { guestbook })
 })
 
@@ -23,7 +11,21 @@ router.get('/new', (req, res) => {
 
 router.post('/', (req, res) => {
     console.log(req.body)
-    res.send('POST /places')
+    if (!req.body.pic) {
+        // Default image if one is not provided
+        req.body.pic = 'http://placekitten.com/250/300'
+    }
+
+    // Default fields if desired
+
+    // if (!req.body.city) {
+    //     req.body.city = 'Anywhere'
+    // }
+    // if (!req.body.state) {
+    //     req.body.state = 'USA'
+    // }
+    guestbook.push(req.body)
+    res.redirect('/guestbook')
 })
 
 module.exports = router
