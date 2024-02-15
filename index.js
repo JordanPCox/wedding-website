@@ -3,6 +3,8 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 
+// PICKUP ON RESTRANT PART 6
+
 // Express settings
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')

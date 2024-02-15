@@ -10,6 +10,19 @@ function Def (html) {
             </head>
             <main className="container">
                 <body>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+                            <li>
+                                <a href="/guestbook">Guestbook</a>
+                            </li>
+                            <li>
+                                <a href="/guestbook/new">Add Post</a>
+                            </li>
+                        </ul>
+                    </nav>
                     {html.children}
                     <footer>
                         This is the sticky footer

@@ -7,9 +7,9 @@ function home () {
             <main>
                 <h1>HOME</h1>
                 <div className="hero-image">                
-                    <a href="/guestbook">
+                    {/* <a href="/guestbook">
                         <button className="btn btn-primary">Guestbook Page</button>
-                    </a>
+                    </a> */}
                 </div>
             </main>
         </Def>
