@@ -28,6 +28,7 @@ nav li {
 nav a {
     color:#E6EEF0;
     font-size: 1.5em;
+    text-decoration: none;
 }
 
 nav a:hover {

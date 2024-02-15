@@ -18,7 +18,7 @@ router.get('/:id', (req, res) => {
         res.render('error404')
     }
     else {
-        res.render('guestbook/show', { guestbook: guestbook[id] })
+        res.render('guestbook/show', { guestbook: guestbook[id], id })
     }
 })
 
@@ -39,6 +39,20 @@ router.post('/', (req, res) => {
     // }
     guestbook.push(req.body)
     res.redirect('/guestbook')
+})
+
+router.delete('/:id', (req, res) => {
+    let id = Number(req.params.id)
+    if (isNaN(id)) {
+        res.render('error404')
+    }
+    else if (!guestbook[id]) {
+        res.render('error404')
+    }
+    else {
+        guestbook.splice(id, 1)
+        res.redirect('/guestbook')
+    }
 })
 
 module.exports = router
