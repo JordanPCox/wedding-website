@@ -9,6 +9,19 @@ router.get('/new', (req, res) => {
     res.render('guestbook/new')
 })
 
+router.get('/:id', (req, res) => {
+    let id = Number(req.params.id)
+    if (isNaN(id)) {
+        res.render('error404')
+    }
+    else if (!guestbook[id]) {
+        res.render('error404')
+    }
+    else {
+        res.render('guestbook/show', { guestbook: guestbook[id] })
+    }
+})
+
 router.post('/', (req, res) => {
     console.log(req.body)
     if (!req.body.pic) {

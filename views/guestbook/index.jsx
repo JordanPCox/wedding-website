@@ -5,13 +5,17 @@ const React = require('react')
 const Def = require('../default')
 
 function index(data) {
-    let guestbookFormatted = data.guestbook.map((guestbook) => {
+    let guestbookFormatted = data.guestbook.map((guestbook, index) => {
         return (
             <div className="col-sm-6">
-                <h2>{guestbook.name}</h2>
-                <p className="text-left">
+                <h2>
+                    <a href={`/guestbook/${index}`}>
+                    {guestbook.name}
+                    </a>
+                </h2>
+                    <p className="text-left">
                     {guestbook.location}
-                </p>
+                    </p>
                 <p className="text-left">
                     How we met: {guestbook.story}
                 </p>
